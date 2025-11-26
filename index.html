@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Yarumal - Cartelera</title>
+    <link rel="icon" href="imagenes/yarucine4.0.png" type="image/png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="estilos/stiles.css">
+</head>
+<body>
+    <!-- NAVEGACIÓN PROFESIONAL -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand animate-logo" href="#">
+                <i class="fas fa-film me-2"></i>
+                Cinema <span class="text-danger">Yarumal</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#cartelera">Cartelera</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reservar">Reservar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#inscripcion">Membresía</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger ms-3 px-4" href="#reservar">
+                            <i class="fas fa-ticket-alt me-2"></i>Comprar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION CON ANIMACIÓN -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="display-3 fw-bold fade-in-up">Bienvenido a Cinema Yarumal</h1>
+            <p class="lead fade-in-up delay-1">La mejor experiencia cinematográfica de la región</p>
+            <button class="btn btn-danger btn-lg fade-in-up delay-2" onclick="document.getElementById('cartelera').scrollIntoView({behavior: 'smooth'})">
+                <i class="fas fa-play me-2"></i>Ver Cartelera
+            </button>
+        </div>
+    </section>
+
+      <!-- CARTELERA CON ANIMACIONES -->
+    <section id="cartelera" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">
+                    <i class="fas fa-star text-warning me-2"></i>
+                    Películas en Estreno
+                </h2>
+                <p class="text-muted">Descubre las mejores películas del momento</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Película 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="movie-card" data-aos="fade-up">
+                        <div class="movie-poster">
+                            <img src="imagenes/mago de oz.jpg"Mago de Oz">
+                            <div class="movie-overlay">
+                                <a href="https://youtu.be/H6bDWV6l69Y?si=IhdZdjTS8tNsSn7Z" target="_blank" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                            <span class="badge bg-danger movie-badge">ESTRENO</span>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Mago de Oz</h4>
+                            <div class="movie-meta">
+                                <span><i class="fas fa-clock me-1"></i>120 min</span>
+                                <span><i class="fas fa-door-open me-1"></i>Sala 1</span>
+                            </div>
+                            <div class="movie-rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <div class="horarios-container">
+                                <p class="mb-2"><strong>Horarios disponibles:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">14:00</span>
+                                    <span class="badge bg-secondary">16:30</span>
+                                    <span class="badge bg-secondary">19:00</span>
+                                    <span class="badge bg-secondary">21:30</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="seleccionarPelicula('Mago de Oz', 10000)">
+                                <i class="fas fa-ticket-alt me-2"></i>Reservar Boletos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="movie-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="movie-poster">
+                            <img src="imagenes/dracula.webp" alt=" Dracula  ">
+                            <div class="movie-overlay">
+                                <a href="https://youtu.be/XyrfKP6R1J4?si=08z02tsFNnwd8FF-" target="_blank" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                            <span class="badge bg-danger movie-badge">ESTRENO</span>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Drácula</h4>
+                            <div class="movie-meta">
+                                <span><i class="fas fa-clock me-1"></i>105 min</span>
+                                <span><i class="fas fa-door-open me-1"></i>Sala 2</span>
+                            </div>
+                            <div class="movie-rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <div class="horarios-container">
+                                <p class="mb-2"><strong>Horarios disponibles:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">15:00</span>
+                                    <span class="badge bg-secondary">17:30</span>
+                                    <span class="badge bg-secondary">20:00</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="seleccionarPelicula('Drácula', 12000)">
+                                <i class="fas fa-ticket-alt me-2"></i>Reservar Boletos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="movie-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="movie-poster">
+                            <img src="imagenes/depredador.jpg" alt="Depredador">
+                            <div class="movie-overlay">
+                                <a href="https://youtu.be/vY4Cw3GRLdI?si=O4ztwK_VjS9WvopW" target="_blank" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                            <span class="badge bg-success movie-badge">3D</span>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Depredador</h4>
+                            <div class="movie-meta">
+                                <span><i class="fas fa-clock me-1"></i>135 min</span>
+                                <span><i class="fas fa-door-open me-1"></i>Sala 3</span>
+                            </div>
+                            <div class="movie-rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <div class="horarios-container">
+                                <p class="mb-2"><strong>Horarios disponibles:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">13:30</span>
+                                    <span class="badge bg-secondary">18:00</span>
+                                    <span class="badge bg-secondary">22:00</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="seleccionarPelicula('Depredador', 15000)">
+                                <i class="fas fa-ticket-alt me-2"></i>Reservar Boletos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+        
+    </section>
+
+    <!-- CARTELERA CON ANIMACIONES -->
+    <section id="cartelera" class="py-5">
+        <div class="container">
+           
+            <div class="row g-4">
+                <!-- Película 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="movie-card" data-aos="fade-up">
+                        <div class="movie-poster">
+                            <img src="imagenes/five ni 2.jpg" alt="Five Nights at Freddy's">
+                            <div class="movie-overlay">
+                                <a href="https://youtu.be/E8M-iJ0p-Xk?si=WUjo9q0Cl1lPrLNi" target="_blank" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                            <span class="badge bg-danger movie-badge">ESTRENO</span>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Five Nights at freddy</h4>
+                            <div class="movie-meta">
+                                <span><i class="fas fa-clock me-1"></i>120 min</span>
+                                <span><i class="fas fa-door-open me-1"></i>Sala 4</span>
+                            </div>
+                            <div class="movie-rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <div class="horarios-container">
+                                <p class="mb-2"><strong>Horarios disponibles:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">14:00</span>
+                                    <span class="badge bg-secondary">16:30</span>
+                                    <span class="badge bg-secondary">19:00</span>
+                                    <span class="badge bg-secondary">21:30</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="seleccionarPelicula('Five Nights at freddy´s', 10000)">
+                                <i class="fas fa-ticket-alt me-2"></i>Reservar Boletos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 5-->
+                <div class="col-lg-4 col-md-6">
+                    <div class="movie-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="movie-poster">
+                            <img src="imagenes/hermanastra fea.jpg" alt=" La hermanastra fea ">
+                            <div class="movie-overlay">
+                                <a href="https://youtu.be/4YORt9yUkZ4?si=GxqEM6o6M68HPvAd" target="_blank" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                            <span class="badge bg-warning movie-badge">HOT</span>
+                        </div>
+                        <div class="movie-info">
+                            <h4>La hermanastra fea</h4>
+                            <div class="movie-meta">
+                                <span><i class="fas fa-clock me-1"></i>105 min</span>
+                                <span><i class="fas fa-door-open me-1"></i>Sala 5</span>
+                            </div>
+                            <div class="movie-rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <div class="horarios-container">
+                                <p class="mb-2"><strong>Horarios disponibles:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">15:00</span>
+                                    <span class="badge bg-secondary">17:30</span>
+                                    <span class="badge bg-secondary">20:00</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="seleccionarPelicula('La hermanastra fea', 12000)">
+                                <i class="fas fa-ticket-alt me-2"></i>Reservar Boletos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="movie-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="movie-poster">
+                            <img src="imagenes/ilusionistas.webp" alt="ilusionistas 3">
+                            <div class="movie-overlay">
+                                <a href="https://youtu.be/2dGUyKN1Zxk?si=6Aa-3KXn1iiC8bSV" target="_blank" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                             <span class="badge bg-warning movie-badge">HOT</span>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Los ilusionistas 3</h4>
+                            <div class="movie-meta">
+                                <span><i class="fas fa-clock me-1"></i>135 min</span>
+                                <span><i class="fas fa-door-open me-1"></i>Sala 6</span>
+                            </div>
+                            <div class="movie-rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <div class="horarios-container">
+                                <p class="mb-2"><strong>Horarios disponibles:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">13:30</span>
+                                    <span class="badge bg-secondary">18:00</span>
+                                    <span class="badge bg-secondary">22:00</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="seleccionarPelicula('ilusionistas 3', 15000)">
+                                <i class="fas fa-ticket-alt me-2"></i>Reservar Boletos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+        
+    </section>
+
+     <!-- CARTELERA CON ANIMACIONES -->
+    <section id="cartelera" class="py-5">
+        <div class="container">
+           
+            <div class="row g-4">
+                <!-- Película 7 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="movie-card" data-aos="fade-up">
+                        <div class="movie-poster">
+                            <img src="imagenes/jujutsu.webp" alt="jujutsu kaisen">
+                            <div class="movie-overlay">
+                                <a href="https://youtu.be/fYL0ni7N4bw?si=-IN1g_zv6Gj7sb5W" target="_blank" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                            <span class="badge bg-danger movie-badge">ESTRENO</span>
+                        </div>
+                        <div class="movie-info">
+                            <h4>jujutsu kaisen: Ejecusión</h4>
+                            <div class="movie-meta">
+                                <span><i class="fas fa-clock me-1"></i>120 min</span>
+                                <span><i class="fas fa-door-open me-1"></i>Sala 7</span>
+                            </div>
+                            <div class="movie-rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="far fa-star text-warning"></i>
+                            </div>
+                            <div class="horarios-container">
+                                <p class="mb-2"><strong>Horarios disponibles:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">14:00</span>
+                                    <span class="badge bg-secondary">16:30</span>
+                                    <span class="badge bg-secondary">19:00</span>
+                                    <span class="badge bg-secondary">21:30</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="seleccionarPelicula('jujutsu kaisen Ejecusión', 10000)">
+                                <i class="fas fa-ticket-alt me-2"></i>Reservar Boletos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 8 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="movie-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="movie-poster">
+                            <img src="imagenes/telefono negro 2.jpg" alt=" Teléfono negro 2  ">
+                            <div class="movie-overlay">
+                                <a href="https://youtu.be/YvqwkLg9o6k?si=0Tz-gR-SIggRGdXe" target="_blank" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                            <span class="badge bg-warning movie-badge">HOT</span>
+                        </div>
+                        <div class="movie-info">
+                            <h4>Telefono negro 2</h4>
+                            <div class="movie-meta">
+                                <span><i class="fas fa-clock me-1"></i>105 min</span>
+                                <span><i class="fas fa-door-open me-1"></i>Sala 8</span>
+                            </div>
+                            <div class="movie-rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <div class="horarios-container">
+                                <p class="mb-2"><strong>Horarios disponibles:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">15:00</span>
+                                    <span class="badge bg-secondary">17:30</span>
+                                    <span class="badge bg-secondary">20:00</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="seleccionarPelicula('Teléfono negro 2', 12000)">
+                                <i class="fas fa-ticket-alt me-2"></i>Reservar Boletos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Película 9 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="movie-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="movie-poster">
+                            <img src="imagenes/wicked.webp" alt="wicked">
+                            <div class="movie-overlay">
+                                <a href="https://youtu.be/_vh2FAGTw58?si=dPrXZdhqHrAW7jUP" target="_blank" class="play-btn">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                            <span class="badge bg-danger movie-badge">ESTRENO</span>
+                        </div>
+                        <div class="movie-info">
+                            <h4>wicked</h4>
+                            <div class="movie-meta">
+                                <span><i class="fas fa-clock me-1"></i>135 min</span>
+                                <span><i class="fas fa-door-open me-1"></i>Sala 9</span>
+                            </div>
+                            <div class="movie-rating">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <div class="horarios-container">
+                                <p class="mb-2"><strong>Horarios disponibles:</strong></p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">13:30</span>
+                                    <span class="badge bg-secondary">18:00</span>
+                                    <span class="badge bg-secondary">22:00</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3" onclick="seleccionarPelicula('wicked', 15000)">
+                                <i class="fas fa-ticket-alt me-2"></i>Reservar Boletos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+        
+    </section>
+
+    <!-- FORMULARIO DE MEMBRESÍA -->
+    <section id="inscripcion" class="py-5 bg-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="membership-card" data-aos="zoom-in">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-crown text-warning fs-1 mb-3"></i>
+                            <h2>Membresía VIP</h2>
+                            <p class="text-muted">Únete y disfruta de beneficios exclusivos</p>
+                        </div>
+                        <form id="form-inscripcion">
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" placeholder="Nombre completo" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                    <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                    <input type="tel" class="form-control" placeholder="Teléfono" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-danger w-100 btn-lg">
+                                <i class="fas fa-check-circle me-2"></i>Unirse Ahora
+                            </button>
+                        </form>
+                        <div class="benefits mt-4">
+                            <div class="benefit-item">
+                                <i class="fas fa-percent text-danger"></i>
+                                <span>20% de descuento en todas tus compras</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-gift text-danger"></i>
+                                <span>Acceso a preventa de estrenos</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-popcorn text-danger"></i>
+                                <span>Combo gratis en tu cumpleaños</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SISTEMA DE RESERVA -->
+    <section id="reservar" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">
+                    <i class="fas fa-couch me-2"></i>
+                    Selecciona tus Asientos
+                </h2>
+            </div>
+
+            <!-- Información de película seleccionada -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="selected-movie-card" data-aos="fade-down">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                            <div>
+                                <h4 id="pelicula-seleccionada">Selecciona una película arriba</h4>
+                                <p class="mb-0">Precio por boleto: <span class="text-danger fw-bold fs-5">$<span id="precio-boleto">0</span></span></p>
+                            </div>
+                            <div class="movie-info-badges">
+                                <span class="badge bg-info"><i class="fas fa-users me-1"></i>5 Salas</span>
+                                <span class="badge bg-success"><i class="fas fa-dollar-sign me-1"></i>Desde $10.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sala de cine -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="cinema-room" data-aos="fade-up">
+                        <!-- Pantalla -->
+                        <div class="screen">
+                            <div class="screen-text">PANTALLA</div>
+                        </div>
+
+                        <!-- Grid de asientos -->
+                        <div class="seats-container">
+                            <div id="asientos-grid" class="seats-grid"></div>
+                        </div>
+
+                        <!-- Leyenda -->
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="seat-mini available"></div>
+                                <span>Disponible</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="seat-mini selected"></div>
+                                <span>Seleccionado</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="seat-mini occupied"></div>
+                                <span>Ocupado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resumen de compra -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="checkout-card" data-aos="fade-up">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h4 class="mb-3">Resumen de tu Compra</h4>
+                                <div class="summary-info">
+                                    <div class="summary-item">
+                                        <i class="fas fa-chair text-primary"></i>
+                                        <span>Asientos: <strong id="cantidad-asientos">0</strong></span>
+                                    </div>
+                                    <div class="summary-item">
+                                        <i class="fas fa-money-bill-wave text-success"></i>
+                                        <span>Total: <strong class="text-danger">$<span id="total-pagar">0</span></strong></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <button class="btn btn-danger btn-lg pulse-animation" onclick="procesarCompra()">
+                                    <i class="fas fa-credit-card me-2"></i>Proceder al Pago
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Cinema Yarumal - Todos los derechos reservados</p>
+            <div class="social-links mt-3">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="script/xddd.js"></script>
+</body>
+</html>
